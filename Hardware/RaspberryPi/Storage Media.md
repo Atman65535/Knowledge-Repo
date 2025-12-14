@@ -1,0 +1,2 @@
+- SD Card : not so durable, just for new. 
+- USB3.0 + SSD 
