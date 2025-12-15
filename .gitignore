@@ -1,0 +1,14 @@
+# Obsidian workspace & cache
+.obsidian/cache
+.obsidian/workspace*
+
+
+# Obsidian sync / local state
+
+# Os / editor junk
+.DS_store
+Thumbs.db
+*.swp 
+*.tmp 
+*.bak
+FINISHED*

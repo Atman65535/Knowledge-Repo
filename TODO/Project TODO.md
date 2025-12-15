@@ -20,7 +20,9 @@
 ## Attention Loss
 this loss is just for one iteration.
 - [ ] Image convert
-- [ ] DDIM reverse process (with grad)
+- [x] DDIM reverse process (with grad)
+	- **Actually we regard z0 as z1, then reverse**. This is valid in enginerring, but not so rigid in theory.
+	- jump to timesteps index 5 if we want 5 denoise steps.
 - [ ] Attention Control module
 - [ ] Hijack the network, add Attention control module.
 - [ ] DDIM denoise.
@@ -48,4 +50,19 @@ this loss is just for one iteration.
 
 
 ## Utilities
-- [ ] register model
+- [x] Image type checker: range \[-1, 1], BCHW
+- [x] register model
+- [x] representable vae encoder
+	return : BCHW
+- [x] build uncond_embeddings.
+- [x] build cond_embeddings.
+
+	**Other Options**
+	- [ ] decorator: build embeddings.
+
+>[!tip] **Next stage (tomorrow)**
+>1. Trace UNet attention maps (where & shape), document clearly
+ >   
+>2. Decide minimal AttentionControl I/O interface (no implementation yet)
+ >   
+>3. Specify attention loss formulation (what is compared, where applied)
