@@ -2,5 +2,12 @@
   "vimMode": false,
   "alwaysUpdateLinks": true,
   "promptDelete": false,
-  "spellcheck": false
+  "spellcheck": false,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 78
+  }
 }
