@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"fd912f4f1e0a47c2","type":"text","text":"## 正态分布\n分布函数$\\Phi(x)$意味着内部的x服从标准正态, 如果是$\\Phi(2x-3)$这类, 要先将内部化为另一个非标准正态的标准化过程.\n$$\n\nf(x_{1:n}) = \\frac{1}{\\sqrt{2\\pi}^{n/2}|\\det{C}|^\\frac12} exp{-\\frac12 (x -\\mu)^T C^{-1} (x - \\mu)}\n\n$$\n$$\n\\Sigma' = A\\Sigma A^T\n$$\n### 正态分布特有特性\n- 独立同分布的正态样本方差和样本均值相互独立,别的分布没有这个性质\n- 联合正态分布的分量协方差为0则独立\n- 正态广义平稳严平稳充要条件\n- **独立的正态**线性组合还是正态, 不独立不行","x":-38,"y":-680,"width":400,"height":490,"color":"6"},
+		{"id":"0f78c8cf8e8aa2b4","type":"text","text":"## 一些统计量\n### 样本方差\n样本方差是方差的无偏估计, 期望就是方差\n### 样本均值\n是期望的无偏,最优,\n\n> 关于$\\Sigma(X_i - \\mu)^2$ 和 $\\bar X$ 其实是不独立的\n> 正态的样本方差和样本均值独立,其他分布没有这个性质","x":490,"y":-610,"width":360,"height":360,"color":"6"},
+		{"id":"3957537a3aa0e23d","type":"text","text":"## 中心极限\n独立同分布, 有限方差和期望\n$$\n\\frac{\\bar{X} - \\mu}{\\sigma/\\sqrt n} \\sim \\mathcal N(0, 1)\n$$\n也就是均值服从正态分布\n## 大数定律\n$$\nP(|X| \\geqslant \\epsilon) \\leqslant \\frac{E|X|^k}{\\epsilon^k} \n$$\n切比雪夫大数定律，只要随机变量X有期望方差就能用\n$$\nP(|X - \\mu| \\geqslant \\epsilon) \\leqslant \\frac{DX}{\\epsilon^2}\n$$\n- 依概率收敛, 也就是大数定律的核心. \n$$\n\\lim_{n \\to +\\infty} \\{|X_n - \\theta | < \\epsilon \\} = 1 \n$$\n","x":-500,"y":-10,"width":518,"height":570},
+		{"id":"d1f2354bd3071fdb","type":"text","text":"## 三大分布\n都要求参与构造的统计量互相独立\n### $\\chi^2$分布\n必须相互独立的正态平方.\nE = n, D = 2n;\n卡方分布的概率密度峰随n增大推迟降低\n独立卡方分布的和还是卡方分布\n### t分布\n$$\nT= \\frac{X}{\\sqrt{Y/n}}\n$$\nt分布是关于0对称的概率密度函数\n### f分布\n$$\nF= \\frac{X/n}{Y/m}\n$$\n长得奇形怪状, 但是只在轴的一侧","x":110,"y":-10,"width":380,"height":620,"color":"3"},
+		{"id":"662a579823cd6a52","type":"text","text":"## 参数估计\n样本矩估计,极大似然估计.\n- 无偏估计\n\t估计的期望就是真实值\n- 最小方差无偏估计\n\t首先是无偏估计,然后方差最小的最优\n- 一致估计\n\t估计量依概率收敛到真实值\n","x":670,"y":60,"width":250,"height":480},
+		{"id":"04adbc137247efc7","type":"text","text":"## 分布函数\n1. 取值范围01\n2. 单调不减\n3. 右侧连续\n4. 正负无穷分别是1, 0\n如果是离散型随机变量则分布律列表,分布函数分区间讨论\n## 二维分布函数\n1. 对单个变量单调不减\n2. 任意一个变量取负无穷,分布函数都是0\n3. 对单个变量x或者y右侧连续\n## 概率密度函数\n1. 全域非负\n2. 积分为1\n二维的也没啥区别","x":-540,"y":-655,"width":360,"height":540,"color":"6"},
+		{"id":"5efc0e4683f202e9","type":"text","text":"## 概率密度函数特殊运算\n- 条件概率密度, 符合条件概率的说法\n- 边缘概率密度, 积分到正无穷. 但是需要看到定义的区域","x":-60,"y":-940,"width":250,"height":245},
+		{"id":"fc643cf6c4110a13","x":520,"y":680,"width":400,"height":400,"type":"file","file":"School works/Random Process.md"}
+	],
+	"edges":[
+		{"id":"3f6411f3d8d8515e","fromNode":"04adbc137247efc7","fromSide":"right","toNode":"fd912f4f1e0a47c2","toSide":"left"},
+		{"id":"071f24ba8148e8cb","fromNode":"fd912f4f1e0a47c2","fromSide":"bottom","toNode":"d1f2354bd3071fdb","toSide":"top","label":"基于正态"},
+		{"id":"4be32ec3a96311da","fromNode":"fd912f4f1e0a47c2","fromSide":"bottom","toNode":"3957537a3aa0e23d","toSide":"top"},
+		{"id":"2b637ed7ea46cde7","fromNode":"0f78c8cf8e8aa2b4","fromSide":"bottom","toNode":"d1f2354bd3071fdb","toSide":"top"},
+		{"id":"95c97d4bb24158f9","fromNode":"d1f2354bd3071fdb","fromSide":"right","toNode":"662a579823cd6a52","toSide":"left"},
+		{"id":"9667faea2f9129bc","fromNode":"5efc0e4683f202e9","fromSide":"left","toNode":"04adbc137247efc7","toSide":"top"}
+	]
+}

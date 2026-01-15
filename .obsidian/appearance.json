@@ -1,4 +1,5 @@
 {
   "interfaceFontFamily": "Jetbrains Mono",
-  "textFontFamily": "CaskaydiaCove Nerd Font Mono,Jetbrains Mono"
+  "textFontFamily": "CaskaydiaCove Nerd Font Mono,Jetbrains Mono",
+  "cssTheme": "Catppuccin"
 }
